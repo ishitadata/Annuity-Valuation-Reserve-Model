@@ -1,12 +1,14 @@
-# Annuity-Valuation-Reserve-Model
+# Annuity Valuation & Reserve Model
+
+📊 [**Open the Excel Model**](Immediate_Annuity_Valuation_Model.xlsx)
 
 An Excel-based actuarial model that prices a single-life immediate annuity and builds its duration-by-duration prospective reserve schedule, using a real published mortality table.
 
 ## Author
- Ishita Narang
+Ishita Narang
 
 ## Overview
-This project builds a working actuarial model for an **immediate annuity in payment** - a pension-payout / annuity-certificate product. In exchange for a single premium (the Net Single Premium, or NSP), the insurer pays the annuitant a fixed income for as long as they are alive.
+This project builds a working actuarial model for an **immediate annuity in payment** — a pension-payout / annuity-certificate product. In exchange for a single premium (the Net Single Premium, or NSP), the insurer pays the annuitant a fixed income for as long as they are alive.
 
 The model:
 - Derives commutation functions (lx, Dx, Nx) from first principles
@@ -34,7 +36,7 @@ At the base case (annuitization age 60, annual payment of Rs. 120,000, valuation
 | Base | 6% | 1,523,170 | — |
 | High | 8% | 1,294,074 | −15.0% |
 
-**Interpretation:** The reserve is largest at outset (equal to the NSP) and runs off toward zero as the annuitant ages, since fewer years of expected payments remain. A higher valuation interest rate discounts future payments more heavily, lowering both the annuity factor and the NSP — and therefore the reserve the insurer must hold at every duration. This sensitivity is one of the largest drivers of an annuity provider's pricing and reserving risk, which is why regulators typically prescribe the valuation rate rather than leaving it to insurer discretion.
+**Interpretation:** The reserve is largest at outset (equal to the NSP) and runs off toward zero as the annuitant ages, since fewer years of expected payments remain. A higher valuation interest rate discounts future payments more heavily, lowering both the annuity factor and the NSP and therefore the reserve the insurer must hold at every duration. This sensitivity is one of the largest drivers of an annuity provider's pricing and reserving risk, which is why regulators typically prescribe the valuation rate rather than leaving it to insurer discretion.
 
 ## Policyholder Profile
 The base-case policyholder assumptions used throughout the model:
@@ -57,11 +59,6 @@ All input cells are editable, so the model can be re-run for any age between 20 
 4. **Reserve schedule** — At each future duration t, the prospective reserve is V_t = Payment × a(x₀+t), i.e., the present value of annuity payments still expected for a survivor then aged (x₀+t). V₀ equals the NSP by construction, and the reserve runs off to zero as the annuitant approaches the table's oldest age.
 5. **Sensitivity analysis** — Dx and Nx are rebuilt in parallel at a Low (4%) and High (8%) discount rate (lx is unchanged, since survivorship doesn't depend on the interest rate), so Base/Low/High results sit side by side.
 
-## Files
-| File | Description |
-|---|---|
-| `Immediate_Annuity_Valuation_Model.xlsx` | Full Excel model (see Sheets below) |
-| `/screenshots` | Dashboard and chart images for quick viewing without opening Excel |
 
 **Sheets in the workbook:**
 - **Cover & Instructions** — project objective, background, and build guide
@@ -81,10 +78,11 @@ The Dashboard/chart sheets include:
 - **Annuity-due Factor (ax) by Age** — line chart showing how the annuity factor falls as annuitization age increases (fewer expected future payments)
 - **NSP Sensitivity to Valuation Rate** — bar chart comparing the NSP under Low, Base, and High interest rate scenarios
 
-```markdown
-![Dashboard](screenshots/dashboard.png)
-![Reserve Run-off](screenshots/reserve_runoff_chart.png)
-```
+![Reserve Run-off by Duration](screenshots/reserve_runoff_chart.png)
+
+![Annuity-due Factor (ax) by Age](screenshots/annuity_factor_chart.png)
+
+![NSP Sensitivity to Valuation Rate](screenshots/nsp_sensitivity_chart.png)
 
 ## What I Learned
 - How to build commutation functions (lx, Dx, Nx) from a real published mortality table, rather than a simplified textbook example
@@ -101,6 +99,5 @@ The Dashboard/chart sheets include:
 
 ## Contact
 ishita.narang05@gmail.com
-
 
 ---
