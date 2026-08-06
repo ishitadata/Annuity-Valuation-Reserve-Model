@@ -1,6 +1,10 @@
-# Annuity Valuation & Reserve Model
+# Immediate Annuity Valuation & Reserve Model
 
-📊 [**Open the Excel Model**](Immediate_Annuity_Valuation_Model.xlsx)
+![Excel](https://img.shields.io/badge/Built%20with-Microsoft%20Excel-217346?logo=microsoft-excel&logoColor=white)
+![Actuarial](https://img.shields.io/badge/Domain-Actuarial%20Science-blue)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+
+📥 [**File**] https://d.docs.live.net/E4C07FCDD03F54CF/Documents/Annuity%20Valuation%20and%20Reserve%20Model.xlsx
 
 An Excel-based actuarial model that prices a single-life immediate annuity and builds its duration-by-duration prospective reserve schedule, using a real published mortality table.
 
@@ -59,7 +63,6 @@ All input cells are editable, so the model can be re-run for any age between 20 
 4. **Reserve schedule** — At each future duration t, the prospective reserve is V_t = Payment × a(x₀+t), i.e., the present value of annuity payments still expected for a survivor then aged (x₀+t). V₀ equals the NSP by construction, and the reserve runs off to zero as the annuitant approaches the table's oldest age.
 5. **Sensitivity analysis** — Dx and Nx are rebuilt in parallel at a Low (4%) and High (8%) discount rate (lx is unchanged, since survivorship doesn't depend on the interest rate), so Base/Low/High results sit side by side.
 
-
 **Sheets in the workbook:**
 - **Cover & Instructions** — project objective, background, and build guide
 - **Assumptions** — all editable inputs (policy profile, payment, interest rates)
@@ -72,17 +75,25 @@ All input cells are editable, so the model can be re-run for any age between 20 
 - **chart** — reserve run-off curve, annuity factor by age, and NSP sensitivity bar chart
 - **Summary** — one-page executive summary of inputs, results, and interpretation
 
-## Visualization
-The Dashboard/chart sheets include:
-- **Reserve Run-off by Duration** — line chart showing the reserve declining from the NSP toward zero as the annuitant ages
-- **Annuity-due Factor (ax) by Age** — line chart showing how the annuity factor falls as annuitization age increases (fewer expected future payments)
-- **NSP Sensitivity to Valuation Rate** — bar chart comparing the NSP under Low, Base, and High interest rate scenarios
+## Visualizations
 
-![Reserve Run-off by Duration](screenshots/reserve_runoff_chart.png)
+### Reserve Run-off by Duration
+Reserve declines from the Net Single Premium toward zero as the annuitant ages and fewer years of expected payments remain.
 
-![Annuity-due Factor (ax) by Age](screenshots/annuity_factor_chart.png)
+![Reserve Run-off by Duration]<img width="196" height="107" alt="reserve runoff by duration" src="https://github.com/user-attachments/assets/b21aa86e-cdec-41c6-a826-74670def2f7b" />
 
-![NSP Sensitivity to Valuation Rate](screenshots/nsp_sensitivity_chart.png)
+
+### Annuity-due Factor (ax) by Age
+The annuity factor falls as annuitization age increases, reflecting a shorter expected payment stream.
+
+![Annuity-due Factor (ax) by Age]<img width="198" height="106" alt="annuity due factor by age" src="https://github.com/user-attachments/assets/27fd4845-a538-4abf-b3da-c9b1d49e58bb" />
+
+
+### NSP Sensitivity to Valuation Rate
+A higher valuation interest rate discounts future payments more heavily, lowering the Net Single Premium; a lower rate has the opposite effect.
+
+![NSP Sensitivity to Valuation Rate]<img width="198" height="109" alt="NSP Senstivity to valuation Rate" src="https://github.com/user-attachments/assets/e09c1337-13a7-44f3-8b8a-c3c6693c4d2f" />
+
 
 ## What I Learned
 - How to build commutation functions (lx, Dx, Nx) from a real published mortality table, rather than a simplified textbook example
