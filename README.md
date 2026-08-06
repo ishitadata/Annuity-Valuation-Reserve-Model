@@ -63,35 +63,17 @@ All input cells are editable, so the model can be re-run for any age between 20 
 4. **Reserve schedule** — At each future duration t, the prospective reserve is V_t = Payment × a(x₀+t), i.e., the present value of annuity payments still expected for a survivor then aged (x₀+t). V₀ equals the NSP by construction, and the reserve runs off to zero as the annuitant approaches the table's oldest age.
 5. **Sensitivity analysis** — Dx and Nx are rebuilt in parallel at a Low (4%) and High (8%) discount rate (lx is unchanged, since survivorship doesn't depend on the interest rate), so Base/Low/High results sit side by side.
 
-**Sheets in the workbook:**
-- **Cover & Instructions** — project objective, background, and build guide
-- **Assumptions** — all editable inputs (policy profile, payment, interest rates)
-- **Mortality Table** — published qx/px rates, ages 20–115
-- **Commutation Functions** — lx, Dx, Nx built from the radix and valuation rate
-- **Annuity Valuation** — ax and NSP at the base case, plus a comparison across ages 55–80
-- **Reserve Schedule** — full duration-by-duration prospective reserve run-off
-- **Sensitivity Analysis** — parallel Dx/Nx tables at Low, Base, and High interest rates
-- **Dashboard** — chart data feeding the visualizations
-- **chart** — reserve run-off curve, annuity factor by age, and NSP sensitivity bar chart
-- **Summary** — one-page executive summary of inputs, results, and interpretation
-
 ## Visualizations
 
 ### Reserve Run-off by Duration
-Reserve declines from the Net Single Premium toward zero as the annuitant ages and fewer years of expected payments remain.
-
 <img width="196" height="107" alt="reserve runoff by duration" src="https://github.com/user-attachments/assets/b21aa86e-cdec-41c6-a826-74670def2f7b" />
 
 
 ### Annuity-due Factor (ax) by Age
-The annuity factor falls as annuitization age increases, reflecting a shorter expected payment stream.
-
 <img width="198" height="106" alt="annuity due factor by age" src="https://github.com/user-attachments/assets/27fd4845-a538-4abf-b3da-c9b1d49e58bb" />
 
 
 ### NSP Sensitivity to Valuation Rate
-A higher valuation interest rate discounts future payments more heavily, lowering the Net Single Premium; a lower rate has the opposite effect.
-
 <img width="198" height="109" alt="NSP Senstivity to valuation Rate" src="https://github.com/user-attachments/assets/e09c1337-13a7-44f3-8b8a-c3c6693c4d2f" />
 
 
