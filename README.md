@@ -80,19 +80,19 @@ All input cells are editable, so the model can be re-run for any age between 20 
 ### Reserve Run-off by Duration
 Reserve declines from the Net Single Premium toward zero as the annuitant ages and fewer years of expected payments remain.
 
-![Reserve Run-off by Duration]<img width="196" height="107" alt="reserve runoff by duration" src="https://github.com/user-attachments/assets/b21aa86e-cdec-41c6-a826-74670def2f7b" />
+<img width="196" height="107" alt="reserve runoff by duration" src="https://github.com/user-attachments/assets/b21aa86e-cdec-41c6-a826-74670def2f7b" />
 
 
 ### Annuity-due Factor (ax) by Age
 The annuity factor falls as annuitization age increases, reflecting a shorter expected payment stream.
 
-![Annuity-due Factor (ax) by Age]<img width="198" height="106" alt="annuity due factor by age" src="https://github.com/user-attachments/assets/27fd4845-a538-4abf-b3da-c9b1d49e58bb" />
+<img width="198" height="106" alt="annuity due factor by age" src="https://github.com/user-attachments/assets/27fd4845-a538-4abf-b3da-c9b1d49e58bb" />
 
 
 ### NSP Sensitivity to Valuation Rate
 A higher valuation interest rate discounts future payments more heavily, lowering the Net Single Premium; a lower rate has the opposite effect.
 
-![NSP Sensitivity to Valuation Rate]<img width="198" height="109" alt="NSP Senstivity to valuation Rate" src="https://github.com/user-attachments/assets/e09c1337-13a7-44f3-8b8a-c3c6693c4d2f" />
+<img width="198" height="109" alt="NSP Senstivity to valuation Rate" src="https://github.com/user-attachments/assets/e09c1337-13a7-44f3-8b8a-c3c6693c4d2f" />
 
 
 ## What I Learned
