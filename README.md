@@ -4,7 +4,7 @@
 ![Actuarial](https://img.shields.io/badge/Domain-Actuarial%20Science-blue)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
-📥 [**File**] https://d.docs.live.net/E4C07FCDD03F54CF/Documents/Annuity%20Valuation%20and%20Reserve%20Model.xlsx
+📥 [**File**] https://d.docs.live.net/E4C07FCDD03F54CF/Documents/Annuity%20Valuation%20and%20Reserve%20Model.xlsx 
 
 An Excel-based actuarial model that prices a single-life immediate annuity and builds its duration-by-duration prospective reserve schedule, using a real published mortality table.
 
